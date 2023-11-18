@@ -1,5 +1,9 @@
 import express from "express";
 import { connectDB } from "./dbConnect.js";
+import { createTable } from "./create-table.js";
+import { insertData } from "./insert-data.js";
+import { getData, getTodo, getallTodo } from "./get-data.js";  
+import { updateData } from "./update-data.js";
 
 const app = express();
 
@@ -12,3 +16,14 @@ connectDB()
   .catch((err:string) => {
     console.log("DB connection error ", err);
   });
+
+  //creating table
+  // createTable();
+  // insertData();
+
+  // getData();
+  // getTodo(4);
+
+  // getallTodo();
+
+  // updateData();
